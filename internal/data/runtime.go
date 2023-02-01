@@ -27,8 +27,8 @@ func (runtime *Runtime) UnmarshalJSON(jsonValue []byte) error {
 	return nil
 }
 
-func (r Runtime) MarshalJSON() ([]byte, error) {
+func (runtime Runtime) MarshalJSON() ([]byte, error) {
 	// Add quotation to the string ort it won't be consider as valid JSON
-	jsonValue := strconv.Quote(fmt.Sprintf("%d mins", r))
+	jsonValue := strconv.Quote(fmt.Sprintf("%d mins", runtime))
 	return []byte(jsonValue), nil
 }

@@ -7,7 +7,7 @@ import (
 )
 
 type Movie struct {
-	ID        int       `json:"id,omitempty"`
+	ID        int64     `json:"id,omitempty"`
 	CreatedAt time.Time `json:"-"` // When the movie was added to the database
 	Title     string    `json:"title,omitempty"`
 	Year      int32     `json:"year,omitempty"`    // The year the movie was released
